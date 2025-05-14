@@ -7,8 +7,13 @@ POKEMON_LIST = [
     Pokemon(
         id=1,
         name="Bulbasaur",
-        types=[PokemonType.GRASS],
-        weaknesses=[PokemonType.FIRE],
+        types=[PokemonType.GRASS, PokemonType.POISON],
+        weaknesses=[
+            PokemonType.FIRE,
+            PokemonType.FLYING,
+            PokemonType.ICE,
+            PokemonType.PSYCHIC,
+        ],
     ),
     Pokemon(
         id=25,
