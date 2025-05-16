@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13.3"
 dependencies = [
+    "requests>=2.32.3",
     "typer>=0.15.3",
 ]
 
@@ -12,4 +13,5 @@ dependencies = [
 dev = [
     "black>=25.1.0",
     "mypy>=1.15.0",
+    "types-requests>=2.32.0.20250515",
 ]
