@@ -23,9 +23,11 @@ class PokemonService:
             entry=json_data["entry"],
             generation=json_data["generation"],
             types=[
-                PokemonType(t)
+                t
                 for t in [
                     json_data["types"]["primary"],
+                    # We can have a secondary type or not depending on the pokemon,
+                    # that's why we want to filter out the None values.
                     json_data["types"]["secondary"],
                 ]
                 if t

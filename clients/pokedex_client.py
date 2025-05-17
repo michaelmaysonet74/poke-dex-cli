@@ -2,7 +2,7 @@ import requests
 
 
 class PokedexClient:
-    def __init__(self, base_url="http://localhost:8080"):
+    def __init__(self, base_url: str):
         self.base_url = base_url
 
     def get_pokemon_by_id(self, id) -> dict | None:
