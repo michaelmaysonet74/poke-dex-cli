@@ -1,4 +1,4 @@
-from models.pokemon import Pokemon
+from models.pokemon import Pokemon, PokemonId
 
 from rich.console import Console
 from rich.table import Table
@@ -24,7 +24,7 @@ def pretty_print(pokemon: Pokemon) -> None:
     console.print(table)
 
 
-def pretty_id(pokemon_id: str) -> str:
+def pretty_id(pokemon_id: PokemonId) -> str:
     match int(pokemon_id):
         case id if id < 10:
             return f"#000{id}"
