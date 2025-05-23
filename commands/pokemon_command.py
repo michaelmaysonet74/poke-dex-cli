@@ -19,7 +19,7 @@ def get_pokemon_by_id(id: int) -> None:
 
 @pokemon_app.command(name="name")
 def get_pokemon_by_name(name: str) -> None:
-    if pokemon := pokemon_service.get_pokemon_by_name(name):
+    if pokemon := pokemon_service.get_pokemon_by_name(name.title()):
         pretty_print(pokemon)
     else:
-        err_console.print(f'Pokemon with name: "{name.capitalize()}" was not found.')
+        err_console.print(f'Pokemon with name: "{name.title()}" was not found.')

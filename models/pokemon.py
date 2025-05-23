@@ -4,9 +4,12 @@ from traits.json_trait import JsonTrait
 from dataclasses import dataclass
 
 
+type PokemonId = str
+
+
 @dataclass(frozen=True)
 class Pokemon(JsonTrait):
-    id: str
+    id: PokemonId
     name: str
     category: str
     entry: str
