@@ -1,6 +1,5 @@
 from clients.pokedex_client import PokedexClient
 from models.pokemon import Pokemon
-from models.pokemon_type import PokemonType
 
 
 class PokemonService:
