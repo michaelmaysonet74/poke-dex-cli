@@ -2,7 +2,7 @@ import requests
 
 
 class PokedexClient:
-    def __init__(self, base_url: str, timeout: float | None = 2):
+    def __init__(self, base_url: str, timeout: float | None = 0.5):
         self.base_url = base_url
         self.timeout = timeout
 
