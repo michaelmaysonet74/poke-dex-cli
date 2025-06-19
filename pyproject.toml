@@ -1,5 +1,5 @@
 [project]
-name = "poke-dex-cli"
+name = "pokedex-cli"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
