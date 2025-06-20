@@ -1,3 +1,5 @@
+from clients.models.pokemon_response import PokemonResponse
+
 import requests
 
 
@@ -6,7 +8,7 @@ class PokedexClient:
         self.base_url = base_url
         self.timeout = timeout
 
-    def get_pokemon_by_id(self, id) -> dict | None:
+    def get_pokemon_by_id(self, id: int) -> PokemonResponse | None:
         try:
             response = requests.get(
                 f"{self.base_url}/api/v1/pokemon/{id}",
@@ -16,7 +18,7 @@ class PokedexClient:
         except:
             return None
 
-    def get_pokemon_by_name(self, name) -> dict | None:
+    def get_pokemon_by_name(self, name: str) -> PokemonResponse | None:
         try:
             response = requests.get(
                 f"{self.base_url}/api/v1/pokemon",
